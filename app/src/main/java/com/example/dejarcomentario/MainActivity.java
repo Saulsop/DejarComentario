@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = txtEmail.getText().toString();
                 String comentario = txtComentario.getText().toString();
 
-                Toast.makeText(this, "Comentario listo " + nombre, Toast.LENGTH_LONG).show();
+
 
 
 
