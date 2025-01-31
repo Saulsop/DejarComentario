@@ -1,6 +1,10 @@
 package com.example.dejarcomentario;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +13,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    // Declarar las variables
+    EditText txtNombre;
+    EditText txtEmail;
+    EditText txtComentario;
+    Button btnEnviar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +29,26 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // Inicializar las vistas
+        txtNombre = findViewById(R.id.txtNombre);
+        txtEmail = findViewById(R.id.txtEmail);
+        txtComentario = findViewById(R.id.txtComentario);
+        btnEnviar = findViewById(R.id.btnEnviar);
+
+        // Configurar el clic del botón "Enviar"
+        btnEnviar.setOnClickListener(v-> {
+
+                // Obtener los valores ingresados por el usuario
+                String nombre = txtNombre.getText().toString();
+                String email = txtEmail.getText().toString();
+                String comentario = txtComentario.getText().toString();
+
+                // Mostrar un Toast con la información
+                String mensaje = " Copmetario enviado por : " + nombre;
+                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_LONG).show();
+
         });
     }
 }
