@@ -40,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
         // Configurar el clic del botón "Enviar"
         btnEnviar.setOnClickListener(v-> {
 
-                // Obtener los valores ingresados por el usuario
-                String nombre = txtNombre.getText().toString();
-                String email = txtEmail.getText().toString();
-                String comentario = txtComentario.getText().toString();
+
 
 
 
