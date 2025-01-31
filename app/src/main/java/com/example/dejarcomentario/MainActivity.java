@@ -45,10 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 String email = txtEmail.getText().toString();
                 String comentario = txtComentario.getText().toString();
 
-                // Mostrar un Toast con la información
-                String mensaje = " Copmetario enviado por : " + nombre;
-                Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_LONG).show();
-
 
         });
     }
